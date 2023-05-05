@@ -1,6 +1,7 @@
 let i = 0;
 
-while(i<=10) {
+while (i <= 10) {
+    let nota = [0]
     let nome = prompt("Digite seu nome");
     let q1 = prompt("Digite a resposta da questao 1");
     let q2 = prompt("Digite a resposta da questao 2");
@@ -13,25 +14,25 @@ while(i<=10) {
     let q9 = prompt("Digite a resposta da questao 9");
     let q10 = prompt("Digite a resposta da questao 10");
     if (q1 == 'B') {
-        i++
+        nota++
     } if (q2 == 'D') {
-        i++
+        nota++
     } if (q3 == 'A') {
-        i++;
+        nota++;
     } if (q4 == 'A') {
-        i++;
+        nota++;
     } if (q5 == 'E') {
-        i++;
+        nota++;
     } if (q6 == 'C') {
-        i++;
+        nota++;
     } if (q7 == 'E') {
-        i++;
+        nota++;
     } if (q8 == 'A') {
-        i++;
+        nota++;
     } if (q9 == 'B') {
-        i++;
+        nota++;
     } if (q10 == 'B') {
-        i++;
+        nota++;
     }
     if (i == 0) {
         alert(`A nota de ${nome} é ${i}`);
@@ -55,11 +56,11 @@ while(i<=10) {
         alert(`A nota do ${nome} é ${i}`);
     } else if (i == 10) {
         alert(`A nota do ${nome} é ${i}`);
-    } 
+    }
     let arr = [nome];
     let arr2 = [i];
-    console.log(arr + arr2);
 }
+console.log("o aluno" + nome + "tirou" + i);
 
 
 
