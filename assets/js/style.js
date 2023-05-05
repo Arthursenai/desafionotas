@@ -1,6 +1,12 @@
-let i = 0;
+let continuar = true;
+let gaba = ['B,D,A,A,E,C,E,A,B,B'];
+let notas = [];
+let alunos = 0;
 
-while(i<=10) {
+
+while (continuar) {
+    let respostasl = [];
+    let i = 0;
     let nome = prompt("Digite seu nome");
     let q1 = prompt("Digite a resposta da questao 1");
     let q2 = prompt("Digite a resposta da questao 2");
@@ -33,33 +39,30 @@ while(i<=10) {
     } if (q10 == 'B') {
         i++;
     }
-    if (i == 0) {
+    if (i >= 0 && i <= 10) {
         alert(`A nota de ${nome} é ${i}`);
-    } else if (i == 1) {
-        alert(`A nota de ${nome} é ${i}`);
-    } else if (i == 2) {
-        alert(`A nota de ${nome} é ${i}`);
-    } else if (i == 3) {
-        alert(`A nota do ${nome} é ${i}`);
-    } else if (i == 4) {
-        alert(`A nota do ${nome} é ${i}`);
-    } else if (i == 5) {
-        alert(`A nota do ${nome} é ${i}`);
-    } else if (i == 6) {
-        alert(`A nota do ${nome} é ${i}`);
-    } else if (i == 7) {
-        alert(`A nota do ${nome} é ${i}`);
-    } else if (i == 8) {
-        alert(`A nota do ${nome} é ${i}`);
-    } else if (i == 9) {
-        alert(`A nota do ${nome} é ${i}`);
-    } else if (i == 10) {
-        alert(`A nota do ${nome} é ${i}`);
-    } 
-    let arr = [nome];
-    let arr2 = [i];
-    console.log(arr + arr2);
+    }
+
+    for (let cont = 0; cont < gaba.length; cont++) {
+        let rs = prompt("quer continuar?");
+        respostasl.push(rs.toUpperCase());
+        if (respostasl[cont] === gaba[cont]) {
+            i++;
+        }
+    }
+
+    alert(`Nota do aluno ${i}`);
+
+    notas.push(i);
+
+    let racontinuar = prompt("Deseja adicionar um aluno?");
+    if (racontinuar.toUpperCase() != 'S') {
+        continuar = true;
+    }
+    alunos++;
 }
 
+console.log(alunos);
+console.log(notas);
 
 
